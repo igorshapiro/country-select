@@ -15,6 +15,87 @@ Install as a gem using
 Or put the following in your Gemfile
 
     gem 'country-select-iso'
+    
+# Using as library
+## Countries list
+```ruby
+CountrySelectIso::countries
+```
+
+will return array of hashes with the following keys:
+<table>
+  <tr>
+    <th>Key symbol</th>
+    <th>Description</th>
+    <th>Example</th>
+  </tr>
+  <tr>
+    <td>:iso2</td>
+    <td>ISO Alpha 2 country code</td>
+    <td>US</td>
+  </tr>
+  <tr>
+    <td>:iso3</td>
+    <td>ISO Alpha 3 country code</td>
+    <td>USA</td>
+  </tr>
+  <tr>
+    <td>:name</td>
+    <td>Country name</td>
+    <td>United States</td>
+  </tr>
+  <tr>
+    <td>:capital</td>
+    <td>Capital city name</td>
+    <td>Washington</td>
+  </tr>
+  <tr>
+    <td>:top_level_domain</td>
+    <td>Top-level internet domain</td>
+    <td>.us</td>
+  </tr>
+  <tr>
+    <td>:currency_code</td>
+    <td>Currency code</td>
+    <td>USD</td>
+  </tr>
+  <tr>
+    <td>:currency_name</td>
+    <td>Currency name</td>
+    <td>Dollar</td>
+  </tr>
+  <tr>
+    <td>:phone_code</td>
+    <td>Phone number country code</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>:postal_code_format</td>
+    <td>Postal code format</td>
+    <td>#####-####</td>
+  </tr>
+  <tr>
+    <td>:postal_code_expr</td>
+    <td>Postal coe Regexp</td>
+    <td>^\d{5}(-\d{4})?$</td>
+  </tr>
+  <tr>
+    <td>:neighbours_iso2</td>
+    <td>Array of neighboring countries ISO2 codes</td>
+    <td>['CA','MX','CU']</td>
+  </tr>
+</table>
+
+## Countries list
+```ruby
+CountrySelectIso::states
+```
+
+will return array of hashes with the following keys:
+
+> TBD
+
+# Using in views
 
 ## Example
 ```ruby
