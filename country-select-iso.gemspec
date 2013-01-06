@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 	s.name					=	'country-select-iso'
-	s.version				= '0.1.0'
+	s.version				= '0.2.0'
 	s.date					= '2012-01-08'
 	s.summary				= 'Country select box'
 	s.description		= 'Provides country & state utilities with country & state selection boxes'
