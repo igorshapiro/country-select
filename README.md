@@ -86,14 +86,45 @@ will return array of hashes with the following keys:
   </tr>
 </table>
 
-## Countries list
+## Country states list
 ```ruby
 CountrySelectIso::states
 ```
 
 will return array of hashes with the following keys:
-
-> TBD
+US.TX    Texas	Texas	4736286
+<table>
+<tr>
+    <th>Key symbol</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+<tr>
+    <td>:country_iso2</td>
+    <td>2-letter ISO country code</td>
+    <td>US</td>
+</tr>
+<tr>
+    <td>:state_code</td>
+    <td>State code</td>
+    <td>TX</td>
+</tr>
+<tr>
+    <td>:full_code</td>
+    <td>[country code 2-letter code].[state code]</td>
+    <td>US.TX</td>
+</tr>
+<tr>
+    <td>:localized_name</td>
+    <td>Localized state name (not sure about this)</td>
+    <td>Texas</td>
+</tr>
+<tr>
+    <td>:name</td>
+    <td>ASCII country name</td>
+    <td>Texas</td>
+</tr>
+</table>
 
 # Using in views
 
@@ -156,6 +187,26 @@ You can also include an array of priority countries that will be shown first. Co
     <option value="AF">Afghanistan</option>
     <option value="AX">Aland Islands</option>
     <option value="AL">Albania</option>
+    ...
+</select>
+```
+
+## States
+
+```ruby
+    state_select("user", "state", value: :full_code, country: "RU", name: :localized_name)
+```
+
+```html
+<select id="user_state" name="user[state]">
+    <option value="RU.01">Adygeya</option>
+    <option value="RU.03">Altay</option>
+    <option value="RU.04">Altayskiy</option>
+    <option value="RU.05">Amur</option>
+    <option value="RU.06">Arkhangelskaya</option>
+    <option value="RU.07">Astrakhan</option>
+    <option value="RU.08">Bashkortostan</option>
+    <option value="RU.09">Belgorod</option>
     ...
 </select>
 ```
