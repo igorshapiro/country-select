@@ -116,7 +116,7 @@ will return array of hashes with the following keys:
 ```
 
 ### Options
-You can set the value of <option> tag to one of the following, by specifying a :value option:
+You can set the value of &lt;option&gt; tag to one of the following, by specifying a :value option:
 
 <table>
     <tr>
