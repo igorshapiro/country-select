@@ -52,7 +52,7 @@ module CountrySelectIso
         # AD.06  Parròquia de Sant Julià de Lòria  Parroquia de Sant Julia de Loria  3039162
         code_parts = p[0].split('.')
         {
-          country_code: code_parts[0],
+          country_iso2: code_parts[0],
           state_code: code_parts[1],
           full_code: p[0],
           localized_name: p[1],
